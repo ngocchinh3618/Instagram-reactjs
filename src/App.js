@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Navbar from "./components/Navbar";
-import Directions from "./router/Directions";
-import { BrowserRouter as Router } from "react-router-dom";
 import "./assets/sass/_main.scss"
-import Aside from "./components/Aside";
 import Login from "./page/Login";
-import CardSuggesstions from "./components/CardSuggesstions";
+// import Navbar from "./components/Navbar";
+// import Directions from "./router/Directions";
+// import { BrowserRouter as Router } from "react-router-dom";
+// import Aside from "./components/Aside";
+// import CardSuggesstions from "./components/CardSuggesstions";
 
 class App extends Component {
   render() {

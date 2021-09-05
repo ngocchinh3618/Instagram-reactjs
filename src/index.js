@@ -5,10 +5,13 @@ import App from "./App";
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import reportWebVitals from "./reportWebVitals";
+import userReducer from "./reducers/users"
 
-const rootReduc = combineReducers({});
+const rootReducer = combineReducers({
+  user : userReducer
+});
 
-const store = createStore(rootReduc);
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>

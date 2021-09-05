@@ -11,13 +11,36 @@ import Input from "../common/Input";
 import { AiFillFacebook } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import Btn from "../common/Btn";
+import DataUser from "../data/users.json";
+import * as actionTypes from "../store/actiontypes";
+import { connect } from "react-redux";
 
 class Login extends Component {
-
-  componentDidMount() {
-    const getAPI 
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: "",
+      submit: false,
+    };
+    this.handleChange = this.handleChange.bind(this);
   }
-  
+
+  btnChange(e) {
+    console.log("text", e.target.value);
+  }
+
+  handleChange(e) {
+    console.log(e.target.value);
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  }
+
+  login() {
+    console.log("object");
+  }
+
+  componentDidMount() {}
 
   render() {
     return (
@@ -57,13 +80,28 @@ class Login extends Component {
                 <img className="img" src={Logo} alt="logo" />
               </div>
               <div className="login-phone">
-                <Input />
+                <Input
+                  placeholder="Phone number, username, or email"
+                  type="text"
+                  name="username"
+                  onChangeEvent={this.handleChange}
+                />
               </div>
               <div className="login-password">
-                <Input />
+                <Input
+                  placeholder="password"
+                  type="password"
+                  name="password"
+                  onChangeEvent={this.handleChange}
+                />
               </div>
               <div className="login-btn">
-                <Btn txt="Log In" />
+                <Btn
+                  txt="Log In"
+                  btnLogin={() =>
+                    this.props.onLogIn(this.state.username, this.state.password)
+                  }
+                />
               </div>
               <div className="line">
                 <div className="line__left"></div>
@@ -78,7 +116,10 @@ class Login extends Component {
                   <AiFillFacebook />
                 </IconContext.Provider>
                 <div>
-                <a className="login-fb__txt" href="!#"> Log in with Facebook</a>
+                  <a className="login-fb__txt" href="!#">
+                    {" "}
+                    Log in with Facebook
+                  </a>
                 </div>
               </div>
               <div className="forgot-pw">
@@ -117,25 +158,59 @@ class Login extends Component {
         </article>
         <footer className="footerr">
           <div className="footerr__start">
-            <div className="item"><a href="!#">About</a></div>
-            <div className="item"><a href="!#">Blog</a></div>
-            <div className="item"><a href="!#">Jobs</a></div>
-            <div className="item"><a href="!#">Help</a></div>
-            <div className="item"><a href="!#">API</a></div>
-            <div className="item"><a href="!#">Privacy</a></div>
-            <div className="item"><a href="!#">Terms</a></div>
-            <div className="item"><a href="!#">Top Accounts</a></div>
-            <div className="item"><a href="!#">Hashtags</a></div>
-            <div className="item"><a href="!#">Locations</a></div>
+            <div className="item">
+              <a href="!#">About</a>
+            </div>
+            <div className="item">
+              <a href="!#">Blog</a>
+            </div>
+            <div className="item">
+              <a href="!#">Jobs</a>
+            </div>
+            <div className="item">
+              <a href="!#">Help</a>
+            </div>
+            <div className="item">
+              <a href="!#">API</a>
+            </div>
+            <div className="item">
+              <a href="!#">Privacy</a>
+            </div>
+            <div className="item">
+              <a href="!#">Terms</a>
+            </div>
+            <div className="item">
+              <a href="!#">Top Accounts</a>
+            </div>
+            <div className="item">
+              <a href="!#">Hashtags</a>
+            </div>
+            <div className="item">
+              <a href="!#">Locations</a>
+            </div>
           </div>
           <div className="footerr__center">
-            <div className="item"><a href="!#">Beauty</a></div>
-            <div className="item"><a href="!#">Dance</a></div>
-            <div className="item"><a href="!#">Fitness</a></div>
-            <div className="item"><a href="!#">Food & Drink</a></div>
-            <div className="item"><a href="!#">Home & Garden</a></div>
-            <div className="item"><a href="!#">Music</a></div>
-            <div className="item"><a href="!#">Visual Arts</a></div>
+            <div className="item">
+              <a href="!#">Beauty</a>
+            </div>
+            <div className="item">
+              <a href="!#">Dance</a>
+            </div>
+            <div className="item">
+              <a href="!#">Fitness</a>
+            </div>
+            <div className="item">
+              <a href="!#">Food & Drink</a>
+            </div>
+            <div className="item">
+              <a href="!#">Home & Garden</a>
+            </div>
+            <div className="item">
+              <a href="!#">Music</a>
+            </div>
+            <div className="item">
+              <a href="!#">Visual Arts</a>
+            </div>
           </div>
           <div className="footerr__endd">
             <p>© 2021 Instagram from Facebook</p>
@@ -146,4 +221,22 @@ class Login extends Component {
   }
 }
 
-export default Login;
+const mapStateToProps = (state) => {
+  return {
+    user: state.user.users,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onLogIn: (username, password) =>
+      dispatch({
+        type: actionTypes.LOGIN,
+        username: username,
+        password: password,
+      }),
+    onLogOut: () => dispatch({ type: actionTypes.LOGOUT }),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
