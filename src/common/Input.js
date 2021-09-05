@@ -12,7 +12,7 @@ class Input extends Component {
     return (
       <div className="loginInput">
         <span></span>
-        <input onChange={this.props.onChangeEvent} placeholder={this.props.placeholder} className="loginInput__input" type={this.props.type} name={this.props.name} />
+        <input onChange={this.props.onChangeEvent} size="30" placeholder={this.props.placeholder} className="loginInput__input" type={this.props.type} name={this.props.name} />
         <div className="loginInput__show d-none">show</div>
       </div>
     );

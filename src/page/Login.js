@@ -22,6 +22,7 @@ class Login extends Component {
       username: "",
       password: "",
       submit: false,
+      disabled: true,
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -31,7 +32,11 @@ class Login extends Component {
   }
 
   handleChange(e) {
-    console.log(e.target.value);
+    if (e.target.value.length > 2) {
+      this.setState({ disabled: false });
+    } else {
+      this.setState({ disabled: true });
+    }
     const { name, value } = e.target;
     this.setState({ [name]: value });
   }
@@ -98,6 +103,7 @@ class Login extends Component {
               <div className="login-btn">
                 <Btn
                   txt="Log In"
+                  disabled={this.state.disabled}
                   btnLogin={() =>
                     this.props.onLogIn(this.state.username, this.state.password)
                   }
