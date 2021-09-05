@@ -1,0 +1,22 @@
+@import "./base/normaliza";
+
+@import "./helpers/variables";
+@import "./helpers/mixin";
+
+@import "./components/app";
+@import "./components/navbar";
+@import "./components/card";
+@import "./components/aside";
+@import "./components/footer";
+@import "./components/cardSuggesstions";
+
+
+@import "./common/cardAcc";
+@import "./common/guessAcc";
+@import "./common/input";
+@import "./common/btn";
+@import "./common/cardFrend";
+@import "./common/reactionBtn";
+
+@import "./pages/home";
+@import "./pages/login"

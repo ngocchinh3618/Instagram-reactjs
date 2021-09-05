@@ -1,0 +1,197 @@
+.box__login {
+  min-height: 100%;
+
+  .login {
+    max-width: 935px;
+    width: 100%;
+    margin: 32px auto 0;
+    justify-content: center;
+    @include flex-align;
+    min-height: 754px !important;
+    @include mobile {
+      margin: 0 auto;
+    }
+
+    &__left {
+      @include mobile {
+        display: none;
+      }
+      background: url("https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png") no-repeat;
+      background-size: 454px 618px;
+      flex-basis: 454px;
+      height: 618px;
+      margin-left: -52px;
+      margin-right: -15px;
+
+      &__carousel {
+        width: 240px;
+        margin-top: 99px;
+        margin-left: 151px;
+
+        .carousel-fade {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+    }
+
+    &__right {
+      flex-grow: 1;
+      max-width: 350px;
+      text-align: center;
+      height: 552px;
+      justify-content: center;
+
+
+
+      &__top {
+        border: 1px solid #dbdbdb;
+        background-color: #fff;
+        margin: 0 0 10px;
+        height: 380px;
+        padding: 10px 40px 0;
+
+        .login-img {
+          width: 177px;
+          margin: -2px auto -19px;
+
+          .img {
+            width: 100%;
+          }
+        }
+
+        .login-phone {
+          margin-top: 30px;
+        }
+
+        .login-btn {
+          width: 268px;
+          height: 30px;
+          margin: 14px auto;
+        }
+
+        .line {
+          margin: 15px auto 25px;
+          color: $gray-500;
+          @include flex-align;
+          font-weight: 600;
+          font-size: 13px;
+          justify-content: space-between;
+
+          &__center {
+            margin-top: 2px;
+          }
+
+          &__left,
+          &__right {
+            width: 108px;
+            height: 1px;
+            background-color: #dbdbdb;
+          }
+        }
+
+        .login-fb {
+          color: $DodgerBlue-500;
+          font-weight: 600;
+          @include flex-align;
+          justify-content: center;
+
+          &__txt {
+            margin-left: 6px;
+          }
+        }
+
+        .forgot-pw {
+          font-size: 12px;
+          color: $DodgerBlue-600;
+          line-height: 14px;
+          margin-top: 19px;
+        }
+      }
+
+      &__center {
+        border-radius: 1px;
+        margin: 0 0 10px;
+        padding: 6px 0;
+        border: 1px solid #dbdbdb;
+        background-color: #fff;
+
+        .sign-up {
+          align-items: center;
+
+          p {
+            margin: 15px 0;
+          }
+
+          &__a {
+            font-weight: 600;
+            color: $DodgerBlue-400;
+          }
+        }
+      }
+
+      &__end {
+        .get-app {
+          margin: 20px 0;
+        }
+
+        .img-dload {
+          justify-content: center;
+          @include flex-align;
+
+          a {
+            width: 136px;
+            height: 40px;
+
+            &:last-child {
+              margin-left: 8px;
+              width: 134px;
+              height: 40px;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  .footerr {
+    color: $gray-500;
+    margin-top: 54px;
+    font-size: 12px;
+    padding: 0 30px;
+
+    &__start,
+    &__center,
+    &__endd {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .item {
+        margin: 0 8px;
+        height: 21px;
+      }
+    }
+
+    &__endd {
+      margin-top: 12px;
+    }
+  }
+
+}
+
+.carousel-item {
+  transition: transform 2s ease-in-out;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  transition: opacity 0s 2s;
+}

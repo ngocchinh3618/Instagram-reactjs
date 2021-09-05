@@ -1,0 +1,37 @@
+.cardFrend{
+  width: 176px;
+  height: 208px;
+  display: block;
+  padding: 20px;
+  margin: 0 14px;
+  border: 1px solid $gray-300;
+  position: relative;
+  border-radius: 4px;
+
+  &__btn{
+    button{
+      @include btn-close;
+  }}
+  &__img{
+    @include flex-align;
+    justify-content: center;
+    padding-bottom: 20px;
+    img{
+      @include boder-img(54px);
+
+    }
+
+  }
+  &__name{
+    @include flex-align;
+    justify-content: center;
+    font-weight:600;
+  }
+  &__description{
+    @include flex-align;
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: $gray-500;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,17 @@
+.home{
+  display: flex;
+  &__content{
+    width: 68%;
+    @include mobile {
+      width: 100%;
+    }
+  }
+  &__aside{
+    margin-top: 20px;
+    width: 32%;
+    padding-left: 8px;
+    @include mobile {
+      display: none;
+    }
+  }
+}
