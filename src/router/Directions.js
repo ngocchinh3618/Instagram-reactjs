@@ -8,7 +8,10 @@ class Directions extends Component {
     return (
       <div>
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/home">
             <Home />
           </Route>
           <Route path="/direct/inbox">

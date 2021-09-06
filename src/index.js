@@ -7,8 +7,9 @@ import {Provider} from 'react-redux';
 import reportWebVitals from "./reportWebVitals";
 import userReducer from "./reducers/users"
 
+
 const rootReducer = combineReducers({
-  user : userReducer
+  usr : userReducer
 });
 
 const store = createStore(rootReducer);

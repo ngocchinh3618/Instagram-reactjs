@@ -48,8 +48,9 @@ class Login extends Component {
   componentDidMount() {}
 
   render() {
+    console.log(this.props.user);
     return (
-      <section className="box__login">
+      <section className="box__login overflow-auto">
         <article className="login">
           <div className="login__left">
             <div className="login__left__carousel">
@@ -229,7 +230,7 @@ class Login extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.user.users,
+    user: state.usr
   };
 };
 

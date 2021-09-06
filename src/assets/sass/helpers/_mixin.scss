@@ -32,6 +32,8 @@ $desktop-width: 1366px;
   }
 }
 
+
+
 @mixin flex-align {
   display: flex;
   align-items: center;
@@ -89,4 +91,13 @@ $desktop-width: 1366px;
       @include btn-plain;
     }
   }
+}
+
+.pd-bt {
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+.pd-se {
+  padding-left: 16px;
+  padding-right: 16px;
 }
