@@ -8,7 +8,7 @@ import Download from "../assets/images/sigin/download.png";
 import GooglePlay from "../assets/images/sigin/googlePlay.png";
 import Logo from "../assets/images/Instagram-Logo.png";
 import Input from "../common/Input";
-import { AiFillFacebook } from "react-icons/ai";
+import { AiFillFacebook, AiOutlineDown } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import Btn from "../common/Btn";
 import DataUser from "../data/users.json";
@@ -95,7 +95,7 @@ class Login extends Component {
               </div>
               <div className="login-password">
                 <Input
-                  placeholder="password"
+                  placeholder="Password"
                   type="password"
                   name="password"
                   onChangeEvent={this.handleChange}
@@ -195,6 +195,9 @@ class Login extends Component {
             <div className="item">
               <a href="!#">Locations</a>
             </div>
+            <div className="item">
+              <a href="!#">Instagram Lite</a>
+            </div>
           </div>
           <div className="footerr__center">
             <div className="item">
@@ -219,8 +222,26 @@ class Login extends Component {
               <a href="!#">Visual Arts</a>
             </div>
           </div>
-          <div className="footerr__endd">
-            <p>© 2021 Instagram from Facebook</p>
+          <div className="footerr__endd d-flex">
+            <div className="d-flex abc">
+
+              <select className="form-select footerr__endd__left text-end">
+                <option selected> English</option>
+                <option value={1}>日本語</option>
+                <option value={2}>Dansk</option>
+                <option value={3}>Norsk</option>
+                <option value={4}>Español</option>
+                <option value={5}>Suomi</option>
+                <option value={6}>हिन्दी</option>
+                <option value={7}>తెలుగు</option>
+              </select>
+
+
+
+
+
+          </div>
+            <div className="footerr__endd__right">© 2021 Instagram from Facebook</div>
           </div>
         </footer>
       </section>

@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { HiDotsHorizontal } from "react-icons/hi";
-import songjongki from "../assets/images/songjongki.png";
 import Cmt from "../assets/icons/cmt.svg";
 import Share from "../assets/icons/share.svg";
 import Save from "../assets/icons/save.svg";
 import Emoticon from "../assets/icons/emoticon.svg";
-import ReactionBtn from "../common/ReactionBtn"
+import ReactionBtn from "../common/ReactionBtn";
+import CardImgSlider from "./CardImgSlider";
+import getRandomIntInclusive from "../helpers/common"
 
 class Card extends Component {
   render() {
-    const listCmt = this.props.latestCmt.map((i,index) => (
+    const listCmt = this.props.latestCmt.map((i, index) => (
       <div key={index} className="card__end__cmt__name">
         <a href="!#">{i.name} 🥰🥰🥰 </a>
         <span>{i.cmt}</span>
@@ -22,7 +23,7 @@ class Card extends Component {
             <a href="!#">
               <img
                 className="card__top__left__avatar"
-                src={songjongki}
+                src={this.props.avatar.replace("3", `${getRandomIntInclusive(1,70)}`)}
                 alt="account"
               />
             </a>
@@ -71,11 +72,7 @@ class Card extends Component {
         </header>
         <div className="card__center">
           <div className="card__center__box">
-            <img
-              className="card__center__box__img"
-              src={this.props.imgContent}
-              alt="songjonki"
-            />
+            <CardImgSlider imgData = {this.props.imgContent} carouselId = {this.props.id}/>
           </div>
           <div className="carousel d-none">
             <img src="#" alt="img" />
@@ -83,10 +80,14 @@ class Card extends Component {
         </div>
         <div className="card__end">
           <section className="card__end__icon">
-            <ReactionBtn liked={this.props.liked} likeChanged = {this.props.likeChanged} type="like"/>
-            <ReactionBtn img={Cmt}/>
-            <ReactionBtn img={Share}/>
-            <ReactionBtn img={Save}/>
+            <ReactionBtn
+              liked={this.props.liked}
+              likeChanged={this.props.likeChanged}
+              type="like"
+            />
+            <ReactionBtn img={Cmt} />
+            <ReactionBtn img={Share} />
+            <ReactionBtn img={Save} />
           </section>
           <section className="card__end__like">
             <div>

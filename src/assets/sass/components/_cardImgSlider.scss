@@ -1,0 +1,25 @@
+.WHImg{
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  // object-fit: contain;
+  object-fit: scale-down;
+  vertical-align:auto;
+}
+.btn-carousel{
+  width: 10px !important ;
+  height: 10px !important;
+  border-radius: 50%;
+  background-color: $gray-500 !important;
+  margin-top: 20px;
+  
+}
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: $DodgerBlue-400 !important;
+
+}
+.carousel-indicators {
+  bottom: -50px !important;
+  
+}

@@ -4,6 +4,7 @@ import logo from "../assets/images/logo.png";
 import acc from "../assets/images/acc.ico";
 import * as actionTypes from "../store/actiontypes";
 import { connect } from "react-redux";
+import { AiFillFacebook, AiOutlineDown } from "react-icons/ai";
 
 class Navbar extends Component {
   constructor(props) {
@@ -94,7 +95,7 @@ class Navbar extends Component {
               </li> */}
               <li className="navbar-icon_right__item account dropdown">
                 <div
-                  activeClassName="icon-item5 dropdown-toggle"
+                  className="icon-item5 dropdown-toggle"
                   id="dropdownMenuButton1"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"

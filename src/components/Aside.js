@@ -6,7 +6,7 @@ import GuessAcc from '../common/GuessAcc';
 class Aside extends Component {
   render() {
     return (
-      <div>
+      <div className="aside-right">
         <CardAcc/>
         <div className="suggestions">
           <div className="suggestions__left">
