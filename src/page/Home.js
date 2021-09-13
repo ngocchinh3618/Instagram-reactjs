@@ -3,22 +3,27 @@ import Aside from "../components/Aside";
 import Card from "../components/Card";
 import CardSuggesstions from "../components/CardSuggesstions";
 import Footer from "../components/Footer";
-import Data from "../data/card-main.json";
+import { connect } from "react-redux";
+import * as actionTypes from "../store/actiontypes";
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.changeLiked = this.changeLiked.bind(this);
   }
+  componentDidMount(){
+    this.props.getDataCardMain()
+  }
+
   changeLiked(id) {
     console.log(id);
-    return Data.filter((item) => item.id == id).forEach(
+    return this.props.card.filter((item) => item.id == id).forEach(
       (item) => (item.liked = !item.liked)
     );
   }
 
   render() {
-    const listCard = Data.map((item, index) => {
+    const listCard = this.props.card.map((item, index) => {
       const suggest = (index == 0)?<CardSuggesstions/>:""
       return <div key={item.id}>
         <Card
@@ -53,4 +58,15 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    card: state.dataCard.data
+  }
+}
+const mapDispatchToProps = dispatch => {
+  return {
+    getDataCardMain: () => dispatch({type: actionTypes.GETDATA}),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

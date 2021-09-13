@@ -4,7 +4,6 @@ import logo from "../assets/images/logo.png";
 import acc from "../assets/images/acc.ico";
 import * as actionTypes from "../store/actiontypes";
 import { connect } from "react-redux";
-import { AiFillFacebook, AiOutlineDown } from "react-icons/ai";
 
 class Navbar extends Component {
   constructor(props) {

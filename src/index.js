@@ -6,10 +6,12 @@ import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import reportWebVitals from "./reportWebVitals";
 import userReducer from "./reducers/users"
+import dataCardMain from "./reducers/getdata"
 
 
 const rootReducer = combineReducers({
-  usr : userReducer
+  usr : userReducer,
+  dataCard: dataCardMain
 });
 
 const store = createStore(rootReducer);
