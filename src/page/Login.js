@@ -224,7 +224,6 @@ class Login extends Component {
           </div>
           <div className="footerr__endd d-flex">
             <div className="d-flex abc">
-
               <select className="form-select footerr__endd__left text-end">
                 <option selected> English</option>
                 <option value={1}>日本語</option>
@@ -235,13 +234,10 @@ class Login extends Component {
                 <option value={6}>हिन्दी</option>
                 <option value={7}>తెలుగు</option>
               </select>
-
-
-
-
-
-          </div>
-            <div className="footerr__endd__right">© 2021 Instagram from Facebook</div>
+            </div>
+            <div className="footerr__endd__right">
+              © 2021 Instagram from Facebook
+            </div>
           </div>
         </footer>
       </section>

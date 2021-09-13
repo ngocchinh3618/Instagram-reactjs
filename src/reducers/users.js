@@ -1,6 +1,5 @@
 import * as actionTypes from "../store/actiontypes";
 import DataUser from "../data/users.json";
-import { Redirect } from "react-router-dom";
 
 const initialState = localStorage.getItem("user") != null ? {username: localStorage.getItem("user")} : {};
 const reducer = (state = initialState, action) => {

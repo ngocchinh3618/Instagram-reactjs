@@ -79,9 +79,10 @@
             border-left: 0;
             border-right: 0;
             padding: 4px 8px;
+            border-top: 1px $gray-500 solid !important;
 
             &:first-child {
-              border-top: none;
+              border-top: none !important;
               color: red;
               font-weight: 600;
             }

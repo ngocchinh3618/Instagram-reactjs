@@ -87,11 +87,6 @@ class Navbar extends Component {
                   </svg>
                 </NavLink>
               </li>
-              {/* <li className=" navbar-icon_right__item account">
-              <NavLink activeClassName="icon-item5" to="/acc">
-                <img className="account__img" src={acc} alt="logo" />
-                  </NavLink>
-              </li> */}
               <li className="navbar-icon_right__item account dropdown">
                 <div
                   className="icon-item5 dropdown-toggle"
