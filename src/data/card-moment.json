@@ -1,0 +1,32 @@
+[
+  {
+   "username": "Bins",
+   "image": "https://i.pravatar.cc/100",
+   "id": "1"
+  },
+  {
+   "username": "Shields",
+   "image": "https://i.pravatar.cc/100",
+   "id": "2"
+  },
+  {
+   "username": "Leuschke",
+   "image": "https://cdn.fakercloud.com/avatars/Chakintosh_128.jpg",
+   "id": "3"
+  },
+  {
+   "username": "Crist",
+   "image": "https://cdn.fakercloud.com/avatars/oktayelipek_128.jpg",
+   "id": "4"
+  },
+  {
+   "username": "Carter",
+   "image": "https://cdn.fakercloud.com/avatars/pmeissner_128.jpg",
+   "id": "5"
+  },
+  {
+   "username": "Keebler",
+   "image": "https://cdn.fakercloud.com/avatars/michzen_128.jpg",
+   "id": "6"
+  }
+ ]

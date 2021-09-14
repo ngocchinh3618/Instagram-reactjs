@@ -11,7 +11,6 @@ import Input from "../common/Input";
 import { AiFillFacebook, AiOutlineDown } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import Btn from "../common/Btn";
-import DataUser from "../data/users.json";
 import * as actionTypes from "../store/actiontypes";
 import { connect } from "react-redux";
 

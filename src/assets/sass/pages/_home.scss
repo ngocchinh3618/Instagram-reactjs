@@ -1,6 +1,6 @@
 .home{
   display: flex;
-  margin-top: 80px;
+  margin-top: 84px;
   &__content{
     width: 68%;
     @include mobile {
@@ -9,10 +9,10 @@
   }
   &__aside{
     position: fixed;
-    top: 88px;
+    top: 108px;
     left: 58%;
-    max-width: 294px;
-    padding-left: 8px;
+    max-width: 312px;
+    padding-left: 22px;
     @include desktop {
       left: 65%;
     }
