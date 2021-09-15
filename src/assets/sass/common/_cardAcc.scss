@@ -1,7 +1,8 @@
-.cardAcc{
+.cardAcc {
   @include card-acc;
   margin-bottom: 10px;
-  &__img{
+
+  &__img {
     margin-right: 18px;
     @include boder-img(56px);
   }

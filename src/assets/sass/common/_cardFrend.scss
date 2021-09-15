@@ -1,4 +1,4 @@
-.cardFrend{
+.cardFrend {
   width: 176px;
   height: 208px;
   display: block;
@@ -8,26 +8,31 @@
   position: relative;
   border-radius: 4px;
 
-  &__btn{
-    button{
+  &__btn {
+    button {
       @include btn-close;
-  }}
-  &__img{
+    }
+  }
+
+  &__img {
     @include flex-align;
     justify-content: center;
     padding-bottom: 20px;
-    img{
+
+    img {
       @include boder-img(54px);
 
     }
 
   }
-  &__name{
+
+  &__name {
     @include flex-align;
     justify-content: center;
-    font-weight:600;
+    font-weight: 600;
   }
-  &__description{
+
+  &__description {
     @include flex-align;
     font-size: 12px;
     margin-bottom: 6px;

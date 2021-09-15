@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-
-
+import React, { Component } from "react";
 
 class Footer extends Component {
   render() {
@@ -42,9 +40,7 @@ class Footer extends Component {
               <a href="!#">Language</a>
             </li>
           </ul>
-          <div className="footer__end">
-          © 2021 INSTAGRAM FROM FACEBOOK
-          </div>
+          <div className="footer__end">© 2021 INSTAGRAM FROM FACEBOOK</div>
         </nav>
       </div>
     );

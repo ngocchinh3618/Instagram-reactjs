@@ -5,18 +5,9 @@ import Data from "../data/card-main.json";
 class CardSuggesstions extends Component {
   constructor(props) {
     super(props);
-    
   }
-  
+
   render() {
-    //  const listCardS = Data.map((item) => 
-    //     <CardFrends  className="d-block w-100" 
-    //   name={item.nickname}
-    //   avatar={item.avatar}
-    // />
-      
-        
-    // );
     return (
       <div className="card-suggesstions">
         <div className="card-suggesstions__top">

@@ -50,10 +50,11 @@ a {
   background-color: transparent;
   text-decoration: none !important;
   color: inherit;
-       &:hover{
-         color: inherit;
-         cursor: pointer;
-       }
+
+  &:hover {
+    color: inherit;
+    cursor: pointer;
+  }
 }
 
 
@@ -118,7 +119,7 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
-  
+
 }
 
 

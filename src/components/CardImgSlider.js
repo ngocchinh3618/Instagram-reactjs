@@ -17,9 +17,6 @@ class CardImgSlider extends Component {
           </div>
         );
     });
-  //  const carouselBtn = this.props.imgData.map((i, index)=>{
-  //   if(index >= ){}
-  //  })
     const carouselBtn = (this.props.imgData.length > 1) ? (
       <div id={`carouselExampleIndicators${this.props.carouselId}`} data-bs-interval="false" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-indicators">

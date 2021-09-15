@@ -1,12 +1,14 @@
-.guessAcc{
+.guessAcc {
   padding-top: 16px;
   padding-left: 4px;
   @include card-acc;
-  &__img{
+
+  &__img {
     margin-right: 14px;
     @include boder-img(32px);
   }
-  &__name{
+
+  &__name {
     font-size: 12px;
   }
 

@@ -1,27 +1,33 @@
-.card-suggesstions{
+.card-suggesstions {
   background-color: $white-600;
   padding: 20px 0;
   margin-bottom: 24px;
   height: 280px;
   border: 1px solid $gray-300;
   max-width: 614px;
-  &__top{
+
+  &__top {
     display: flex;
-    margin: 0 24px 12px 24px;;
+    margin: 0 24px 12px 24px;
     justify-content: space-between;
     font-weight: 600;
-    &__left{
+
+    &__left {
       color: $gray-500;
     }
-    &__right, &:hover{
+
+    &__right,
+    &:hover {
       color: $DodgerBlue-400;
     }
   }
-  @include mobile{
+
+  @include mobile {
     margin: auto;
-  } 
+  }
 }
-.color-btn-control{
+
+.color-btn-control {
   background-color: #7F7F7F;
   height: 24px;
   width: 24px;

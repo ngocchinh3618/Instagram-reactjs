@@ -1,12 +1,14 @@
 .card {
   max-width: 614px;
   margin-bottom: 28px;
-  @include mobile{
+
+  @include mobile {
     padding-bottom: 15px;
     margin-bottom: 0;
     border: none;
     margin: auto;
   }
+
   &__top {
     flex-direction: row;
     height: 60px;
@@ -15,8 +17,7 @@
     width: 100%;
 
     &__left {
-      // border: thin solid #9b9697;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       width: 30px;
       height: 30px;
       border-radius: 100%;
@@ -60,9 +61,10 @@
       margin-left: auto;
 
       .modal-dialog {
-        @include mobile{
+        @include mobile {
           margin: 100px auto;
         }
+
         width: 400px;
         margin-top: 100px;
 
@@ -101,75 +103,93 @@
       }
     }
   }
-  &__center{
-    &__box{
-    
+
+  &__center {
+    &__box {
+
       max-width: 614px;
       height: 100%;
     }
-    
+
   }
-  &__end{
+
+  &__end {
     margin-top: $mg-4;
-    &__icon{
+
+    &__icon {
       padding: 0 16px;
       display: flex;
     }
-    &__like{
+
+    &__like {
       padding: 0 16px;
       margin-bottom: 8px;
       font-weight: 600;
-      &__a{
+
+      &__a {
         text-decoration: none;
-        &:hover{
+
+        &:hover {
           color: inherit;
           cursor: pointer;
         }
       }
     }
-    &__cmt{
+
+    &__cmt {
       padding: 0 16px;
       color: #8e8e8e;
-      &__name{
+
+      &__name {
         padding-bottom: 4px;
-        a{
+
+        a {
           font-weight: 600;
           color: #262626;
         }
       }
-      &__allcmt{
+
+      &__allcmt {
         padding-bottom: 4px;
       }
-      &__day{
+
+      &__day {
         padding: 0 16px 4px 16px;
         text-transform: uppercase;
         font-size: 10px;
       }
-     
+
     }
-    &__post{
-      @include mobile{
+
+    &__post {
+      @include mobile {
         display: none;
       }
+
       padding: 0 16px;
       height: 56px;
       border-top: 1px solid #efefef;
       @include flex-align;
-      &__center{
+
+      &__center {
         padding-left: 16px;
         width: 86%;
-       input{
-         border: none !important;
-         min-width: 100%;
-         &:focus-visible{
-          outline: none;
-         }
-       }
+
+        input {
+          border: none !important;
+          min-width: 100%;
+
+          &:focus-visible {
+            outline: none;
+          }
+        }
       }
-      &__right{
-        button{
+
+      &__right {
+        button {
           @include btn-plain;
         }
+
         margin-left: auto;
       }
     }

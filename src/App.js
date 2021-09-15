@@ -23,9 +23,6 @@ class App extends Component {
       <div>
         {directions}
       </div>
-    // <CardSuggesstions/>
-        // <Login/>
-      // 
     );
   }
 }

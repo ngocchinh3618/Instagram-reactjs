@@ -1,28 +1,31 @@
-.loginInput{
+.loginInput {
   position: relative;
   @include flex-align;
   justify-content: center;
   margin-bottom: 6px;
-  
-  &__span{
+
+  &__span {
     position: absolute;
   }
-  &__input{
+
+  &__input {
     width: 268px;
     height: 38px;
     border: 1px solid $gray-300;
     border-radius: 3px;
     background-color: $gray-200;
     padding-left: 6px;
-    &:focus-visible{
+
+    &:focus-visible {
       outline: none;
     }
+
     &::placeholder {
       font-size: 12px;
     }
   }
-  
-  &__show{
+
+  &__show {
     position: absolute;
     right: 0;
     font-weight: 600;
