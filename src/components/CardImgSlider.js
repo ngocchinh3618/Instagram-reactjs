@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 class CardImgSlider extends Component {
   render() {
-    console.log(" this.props.imgContent", this.props.imgData);
     const listImg = this.props.imgData.map((i, index) => {
       if (index == 0) {
         return (

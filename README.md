@@ -1,3 +1,2 @@
 yarn update
-
 yarn start

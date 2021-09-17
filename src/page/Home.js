@@ -9,6 +9,7 @@ import CardMoment from "../components/CardMoment";
 function Home() {
   const counter = useSelector((state) => state.dataCard.data);
   const dataMoment = useSelector((state) => state.dataMoment.data);
+  const guessAcc = useSelector((state) => state.dataSuggestions.data);
   console.log("object12", dataMoment);
   const dispatch = useDispatch();
 
@@ -36,14 +37,18 @@ function Home() {
 
   const dataMomentCard = dataMoment.map((item, i) =>(
     <CardMoment img = {item.image} name = {item.username}/>
-  ))
-  console.log("dataMomentCard", dataMomentCard);
+  ));
+
+
   useEffect(() => {
     dispatch({
       type: "GETDATA",
     });
     dispatch({
       type: "GETMOMENT",
+    });
+    dispatch({
+      type: "GETDATASUGGESTIONS",
     });
   }, []);
   return (
@@ -55,7 +60,7 @@ function Home() {
         {counterList}
       </div>
       <div className="home__aside">
-        <Aside />
+        <Aside dataguessAcc = {guessAcc}/>
         <Footer />
       </div>
     </div>

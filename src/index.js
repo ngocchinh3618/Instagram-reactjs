@@ -8,11 +8,13 @@ import reportWebVitals from "./reportWebVitals";
 import userReducer from "./reducers/users";
 import dataCardMain from "./reducers/getdata";
 import dataMoment from "./reducers/getmoment";
+import dataSuggestions from "./reducers/getdataSuggestions";
 
 const rootReducer = combineReducers({
   usr: userReducer,
   dataCard: dataCardMain,
-  dataMoment: dataMoment
+  dataMoment: dataMoment,
+  dataSuggestions: dataSuggestions
   
 });
 

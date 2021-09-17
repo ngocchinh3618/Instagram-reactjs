@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CardFrends from "../common/CardFrends";
+import CardFriends from "../common/CardFrends";
 import Data from "../data/card-main.json";
 
 class CardSuggesstions extends Component {
@@ -28,23 +28,24 @@ class CardSuggesstions extends Component {
             <div className="carousel-inner">
               <div className="carousel-item active ">
                 <div className="d-flex">
-                  <CardFrends className="d-block w-100" />
-                  <CardFrends className="d-block w-100" />
-                  <CardFrends className="d-block w-100" />
+                  <CardFriends className="d-block w-100" />
+                  <CardFriends className="d-block w-100" />
+                  <CardFriends className="d-block w-100" />
+                 
                 </div>
               </div>
               <div className="carousel-item">
                 <div className="d-flex">
-                  <CardFrends className="d-block w-100" />
-                  <CardFrends className="d-block w-100" />
-                  <CardFrends className="d-block w-100" />
+                  <CardFriends className="d-block w-100" />
+                  <CardFriends className="d-block w-100" />
+                  <CardFriends className="d-block w-100" />
+                  
                 </div>
               </div>
               <div className="carousel-item">
                 <div className="d-flex">
-                  <CardFrends className="d-block w-100" />
-                  <CardFrends className="d-block w-100" />
-                  <CardFrends className="d-block w-100" />
+                  <CardFriends className="d-block w-100" />
+                 
                 </div>
               </div>
             </div>
